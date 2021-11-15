@@ -48,9 +48,9 @@ public class LittlePersonDataBase {
     }
 
     public StatusMessage createPerson() {
-        ui.firstName();
+        ui.firstNamePrompt();
         String firstName = ui.userString();
-        ui.lastName();
+        ui.lastNamePrompt();
         String lastName = ui.userString();
         Person person = new Person(firstName, lastName);
         personList.add(person);
@@ -62,7 +62,7 @@ public class LittlePersonDataBase {
     public void loadStockLittlePeople() {
         personList.add(new Person("Warwick", "Davis"));
         personList.add(new Person("Kenny", "Baker"));
-        personList.add(new Person("Verne", "troyer"));
+        personList.add(new Person("Verne", "Troyer"));
         personList.add(new Person("Meredith", "Eaton"));
         personList.add(new Person("Peter", "Dinklage"));
     }

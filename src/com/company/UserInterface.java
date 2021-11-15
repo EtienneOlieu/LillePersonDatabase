@@ -53,11 +53,11 @@ public class UserInterface {
         System.out.println(message);
     }
 
-    public void firstName() {
+    public void firstNamePrompt() {
         System.out.println("Please type the first name of the little person you wish to add.");
     }
 
-    public void lastName() {
+    public void lastNamePrompt() {
         System.out.println("Please type the last name of the little person you wish to add.");
     }
 
