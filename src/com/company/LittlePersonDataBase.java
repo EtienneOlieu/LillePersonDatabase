@@ -38,13 +38,15 @@ public class LittlePersonDataBase {
     }
 
     private StatusMessage removePerson(String userInput) {
-        int littlePersonChoice = Integer.parseInt(userInput);
+        StatusMessage statusMessage = null;
         try {
+        int littlePersonChoice = Integer.parseInt(userInput);
             personList.remove(littlePersonChoice - 1);
-        } catch (IndexOutOfBoundsException e) {
-            ui.statusOutput(StatusMessage.NOTFOUND);
+            statusMessage = StatusMessage.OK;
+        } catch (IndexOutOfBoundsException | NumberFormatException e) {
+            statusMessage = StatusMessage.NOTFOUND;
         }
-        return StatusMessage.OK;
+        return statusMessage;
     }
 
     public StatusMessage createPerson() {
